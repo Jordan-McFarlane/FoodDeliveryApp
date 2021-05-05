@@ -1,13 +1,19 @@
 package com.example.fooddeliveryapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FrontPage  extends AppCompatActivity {
     private Resturant[] resturants;
@@ -17,6 +23,8 @@ public class FrontPage  extends AppCompatActivity {
     private FoodItem[] breakfast;
     private FoodItem[] sushi;
     private ImageView image;
+    private Toolbar toolbar;
+    private BottomNavigationView navView;
 
 
     private EditText search;
@@ -29,6 +37,25 @@ public class FrontPage  extends AppCompatActivity {
 
        search = (EditText) findViewById(R.id.search);
        image = (ImageView) findViewById(R.id.resturant_image);
+       navView = (BottomNavigationView) findViewById(R.id.design_nav_view);
+
+
+       navView.setSelectedItemId(R.id.homeIcon);
+
+        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.homeIcon:
+                        startActivity(new Intent(getApplicationContext(),Menu.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+
 
 
 
