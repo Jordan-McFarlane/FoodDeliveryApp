@@ -1,0 +1,11 @@
+
+<resources>
+    <declare-styleable name="FoodFragment">
+
+
+
+        <attr name="descriptionText" format="string" />
+
+
+    </declare-styleable>
+</resources>
