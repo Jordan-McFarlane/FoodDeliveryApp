@@ -45,7 +45,11 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.1.1'
     implementation "androidx.room:room-rxjava2:$room_version"
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
 
 
 
 }
+
+apply plugin: 'com.google.gms.google-services'

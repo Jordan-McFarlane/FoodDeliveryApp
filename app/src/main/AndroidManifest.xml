@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDeliveryApp">
-        <activity android:name=".FrontPage">
+
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Menu"> </activity>
+        <activity android:name=".SignUp"/>
+        <activity android:name=".SignIn" />
+        <activity android:name=".FrontPage" />
+        <activity android:name=".Menu" />
 
         <meta-data
             android:name="preloaded_fonts"
